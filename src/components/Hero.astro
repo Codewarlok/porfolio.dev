@@ -1,0 +1,46 @@
+---
+const personalImageAlt = "Diego Brando"
+import Container from "@/components/Container.astro"
+import LinkedIn from "@/components/icons/LinkedIn.astro"
+import GitHub from "@/components/icons/GitHub.astro"
+import Mail from "@/components/icons/Mail.astro"
+import SocialPill from "@/components/SocialPill.astro"
+import Badge from "@/components/Badge.astro"
+---
+    <Container class="pt-24 md:pt-40 pb-24 max-w-xl">
+      <div class="flex">
+        <div class="avatar online">
+          <div class="size-16 rounded-full mb-4 shadow-lg flex">
+            <img 
+              src="https://lh3.googleusercontent.com/a/ACg8ocL7kcYe26piSkHEPOD7xyDnFTmjHl6Otm9sp-ubTP-vhGs_-CQA=s288-c-no"
+              alt={personalImageAlt} />            
+          </div>        
+        </div>
+        <a 
+          href="https://www.linkedin.com/in/diegobrando/"
+          target="_blank"
+          rel="noopener"
+          class="mx-3 mt-4 transition hover:scale-105">
+          <Badge>Disponible para laburar</Badge>
+        </a>
+      </div>
+
+      <h1 class="text-grey-800 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 md:pb-6 lg:pb-8 opacity-90">Ahoy!, soy Diego Brando        
+      </h1>
+      <h2 class="text-grey-800 dark:text-white text-xl md-text-2xl lg:text-3xl text-pretty max-w-[600px] opacity-80">+Experiencia and stuff <span class="text-yellow-400 font-semibold">Pythonista</span>, entusiasta de la <span class="text-blue-400 font-semibold">programación funcional</span> y el código abierto</h2>
+    
+    <nav class="flex gap-4 mt-4 flex-wrap">
+      <SocialPill href="https://www.linkedin.com/in/diegobrando/">
+        <LinkedIn class=" size-4 md:size-5 lg:size-6" />
+        LinkedIn
+      </SocialPill>
+      <SocialPill href="https://github.com/Codewarlok">
+        <GitHub class=" size-4 md:size-5 lg:size-6" />
+        GitHub
+      </SocialPill>
+      <SocialPill href="mailto:diego3rando@gmail.com">
+        <Mail class=" size-4 md:size-5 lg:size-6" />
+        Diego3rando@gmail.com
+      </SocialPill>
+    </nav>
+    </Container>
