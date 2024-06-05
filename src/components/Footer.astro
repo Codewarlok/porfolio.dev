@@ -1,16 +1,18 @@
+---
+const currentYear = new Date().getFullYear();
+---
 
-
-<footer class="rounded-lg shadow m-4 bg-black/20 backdrop-blur-lg w-full xl:w-[1120px] mx-auto mt-20 mb-10">
-    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Nanaisoft™</a>. Todos los derechos reservados.
-    </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-400 sm:mt-0">
+<footer class="rounded-lg shadow bg-black/20 backdrop-blur-lg w-auto xl:w-[1120px] m-2 mt-20 mb-10">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between opacity-80">
+    <span class="text-sm  text-gray-500 sm:text-center dark:text-gray-400">© {currentYear} <a href="#" class="hover:underline font-semibold">Nanaisoft<b>™</b></a>. Todos los derechos reservados.
+  </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-gray-400 sm:mt-0">
         <li>
-            <a href="#yomismo" class="hover:underline me-4 md:me-6">Sobre mí</a>
+          <a href="#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
         </li>
         <li>
-            <a href="#" class="hover:underline">Contacto</a>
+          <a id="contacto" href="mailto:Diego3rando@gmail.com" class="hover:underline">Contacto</a>
         </li>
     </ul>
-    </div>
+  </div>
 </footer>

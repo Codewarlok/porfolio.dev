@@ -2,6 +2,7 @@
 import SunIcon from "./icons/Sun.astro"
 import MoonIcon from "./icons/Moon.astro"
 import SystemIcon from "./icons/System.astro"
+import { Icon } from 'astro-icon/components'
 
 const THEMES = ["Light", "Dark", "System"]
 ---
@@ -12,11 +13,13 @@ const THEMES = ["Light", "Dark", "System"]
     class="appearance-none border-none flex hover:scale-125 transition"
   >
     <span class="sr-only">Elige el tema</span>
-    <SunIcon id="light" class="theme-toggle-icon size-5 transition-all" />
-    <MoonIcon
+    <Icon name="meteocons:clear-day" id="light" class="theme-toggle-icon absolute size-7 transition-all" />
+<!--     <SunIcon id="light" class="theme-toggle-icon size-5 transition-all" /> -->
+    <Icon name="meteocons:starry-night" id="dark" class="theme-toggle-icon relative size-7 transition-all" />
+<!--     <MoonIcon
       id="dark"
       class="theme-toggle-icon absolute size-5 transition-all"
-    />
+    /> -->
     <SystemIcon
       id="system"
       class="theme-toggle-icon absolute size-5 transition-all"
