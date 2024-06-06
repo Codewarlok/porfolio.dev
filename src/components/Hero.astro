@@ -1,17 +1,14 @@
 ---
 const personalImageAlt = "Diego Brando"
 import Container from "@/components/Container.astro"
-import LinkedIn from "@/components/icons/LinkedIn.astro"
-import GitHub from "@/components/icons/GitHub.astro"
-import Mail from "@/components/icons/Mail.astro"
 import SocialPill from "@/components/SocialPill.astro"
 import Badge from "@/components/Badge.astro"
 import { Icon } from 'astro-icon/components';
 ---
-<Container class="pt-24 md:pt-40 pb-24 max-w-xl">
-  <div class="flex">
+<Container class="pt-24 pb-24 md:pt-40 max-w-xl">
+  <div class="flex mb-4">
     <div class="avatar online">
-      <div class="size-16 rounded-full mb-4 shadow-lg flex">
+      <div class="size-16 rounded-full shadow-lg flex">
         <img 
           src="https://lh3.googleusercontent.com/a/ACg8ocL7kcYe26piSkHEPOD7xyDnFTmjHl6Otm9sp-ubTP-vhGs_-CQA=s288-c-no"
           alt={personalImageAlt} />            
@@ -21,27 +18,27 @@ import { Icon } from 'astro-icon/components';
       href="https://www.linkedin.com/in/diegobrando/"
       target="_blank"
       rel="noopener"
-      class="mx-3 mt-4 transition hover:scale-105">
-      <Badge>Disponible para laburar</Badge>
+      class="px-3 pt-4">
+      <Badge>Commissions open</Badge>
     </a>
   </div>
 
-  <h1 class="text-grey-800 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 md:pb-6 lg:pb-8 opacity-90">Ahoy!, soy Diego Brando        
-  </h1>
-  <h2 class="text-grey-800 dark:text-white text-xl md-text-2xl lg:text-3xl text-pretty max-w-[600px] opacity-80">+Experiencia and stuff <span class="text-yellow-400 font-semibold">Pythonista</span>, entusiasta de la <span class="text-blue-600 font-semibold">programación funcional</span> y el código abierto</h2>
+  <h1 class="text-gray-800 dark:text-white text-4xl sm:text-5xl lg:text-6xl tracking-tight font-bold flex flex-row gap-x-4 pb-4 md:pb-6 lg:pb-8 opacity-90">Ahoy!, soy Diego Brando</h1>
+  
+  <p class="text-gray-800 dark:text-white text-xl sm:text-2xl lg:text-3xl text-pretty opacity-80">+Experiencia and stuff <span class="text-yellow-500 dark:text-yellow-300 font-semibold">Pythonista</span>, entusiasta de la <span class="text-blue-500 dark:text-blue-400 font-semibold">programación funcional</span> y el código abierto.</p>
 
-<nav class="flex gap-4 mt-4 flex-wrap">
+<nav class="flex gap-3 mt-6 flex-wrap">
   <SocialPill href="https://www.linkedin.com/in/diegobrando/">
-    <Icon name="line-md:linkedin" class="size-4 md:size-5 lg:size-6" />
+    <Icon name="line-md:linkedin" class="size-4 md:size-5" />
     LinkedIn
   </SocialPill>
   <SocialPill href="https://github.com/Codewarlok">
-    <Icon name="line-md:github-loop" class="size-5 md:size-6 lg:size-7" />
+    <Icon name="line-md:github-loop" class="size-5 md:size-6" />
     GitHub
   </SocialPill>
   <SocialPill href="mailto:diego3rando@gmail.com">
-    <Icon name="line-md:email-twotone" class="size-5 md:size-6 lg:size-7" />
-    Diego3rando@gmail.com
+    <Icon name="line-md:email-twotone" class="size-5 md:size-6" />
+    Contáctame
   </SocialPill>
 </nav>
 </Container>
