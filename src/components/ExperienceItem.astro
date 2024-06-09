@@ -1,5 +1,4 @@
 ---
-import LinkInLine from './LinkInLine.astro'
 interface Props {
   title: string
   company: string
@@ -11,32 +10,42 @@ interface Props {
 const { title, company, description, link, date } = Astro.props
 ---
 
+<!-- <div class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2  before:border-slate-300 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]">
+  <div class="relative pb-12 md:col-span-2">
+    <div class="sticky top-0">
+      
+      <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl"
+        >&bull;</span> -->
+        <div class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2  before:border-slate-300 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]">
+          <div class="relative pb-12 md:col-span-2">
+            <div class="sticky top-0">
+        <div class="absolute size-3 bg-yellow-200 rounded-full mt-1.5 -start-10 border border-gray-300 dark:border-gray-900 dark:bg-gray-700"> <div class="flex items-center ">
+          <span class="relative inline-flex overflow-hidden rounded-full p-[1px]">
+            <span
+              class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ffff00_0%,#21554E_50%,#ffff00_100%)]"
+            ></span>
+            <div class="inline-flex items-center justify-center w-full px-3 py-1 text-xs md:text-sm text-green-800 bg-yellow-400/90 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap">
+              <slot />
+            </div>
+          </span>
+        </div></div>
+          
 
-<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"> <div class="flex items-center ">
-  <span class="relative inline-flex overflow-hidden rounded-full p-[1px]">
-    <span
-      class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ffff00_0%,#21554E_50%,#ffff00_100%)]"
-    ></span>
-    <div class="inline-flex items-center justify-center w-full px-3 py-1 text-xs md:text-sm text-green-800 bg-green-100 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap">
-      <slot />
+  <h3 class="text-xl font-bold text-yellow-500  dark:text-yellow-300/90">{title}</h3>
+  <h4 class="font-semibold text-lg text-gray-600 dark:text-white/90">{company}</h4>
+  <time class="mb-1 text-sm leading-none text-blue-500/90  dark:text-blue-400/90">{date}</time>
     </div>
-  </span>
-</div></div>
+  </div>
 
-
-<h3 class="text-xl font-semibold text-yellow-400/70">{title}</h3>
-
-<h4 class="font-semibold text-lg text-gray-600 dark:text-white/90">{company}</h4>
-
-<time class="mb-1 text-sm font-normal leading-none dark:text-blue-400/90 dark:text-gray-500">{date}</time>
-
-<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-200/90 text-pretty">{description}</p>
-{
-  link && (
-    <a href={link} class="inline-flex items-center p-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Saber más... <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-    </svg></a>
-  )
-}
+  <div class="relative flex flex-col gap-2 mb-4 text-gray-700 dark:text-white/90 text-pretty md:col-span-3">{description}
+  {
+    link && (
+      <a href={link} class="inline-flex max-w-fit items-center p-2 text-sm font-medium text-zinc-900 bg-gray-300 border border-zinc-400  dark:border-white/10  rounded-lg hover:bg-gray-100 hover:text-blue-600  dark:hover:text-yellow-300 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-500 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600  dark:hover:bg-gray-700 dark:focus:ring-gray-700">Saber más... <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+      </svg></a>
+    )
+  }
+  </div>
+</div>
 <!-- 
 esa wea es un renderizado condicional o la wea buena -->

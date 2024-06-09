@@ -13,12 +13,12 @@ const EXPERIENCE = [
     date: 'Marzo 2023 - Actualmente...',
     title: 'Web Developer',
     company: 'Tech Corp.',
-    description: 'I worked on a team of developers to build and maintain the company\'s website. I was responsible for the implementation of new features and improvements to the site. I also worked closely with the design team to ensure that the site was visually appealing and user-friendly.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ',
   },
   {
     date: "Septiembre 2022",
     title: "Principal Frontend Engineer",
-    company: "Adevinta Spain",
+    company: "Adventa Corp",
     description:
       "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
   },
@@ -30,12 +30,14 @@ const EXPERIENCE = [
   },
 ];
 ---
-<ol class="relative items-center border-s-2 border-gray-300 dark:border-gray-700 max-w-[700px] ml-3">
-    {
-      EXPERIENCE.map((experience) => (
-        <li class="mb-10 ms-4">
-          <ExperienceItem {...experience} />
-        </li>
-        ))
-    }   
+
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
 </ol>

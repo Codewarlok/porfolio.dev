@@ -1,7 +1,4 @@
 ---
-import SunIcon from "./icons/Sun.astro"
-import MoonIcon from "./icons/Moon.astro"
-import SystemIcon from "./icons/System.astro"
 import { Icon } from 'astro-icon/components'
 
 const THEMES = ["Light", "Dark", "System"]
@@ -14,20 +11,12 @@ const THEMES = ["Light", "Dark", "System"]
   >
     <span class="sr-only">Elige el tema</span>
     <Icon name="meteocons:clear-day" id="light" class="theme-toggle-icon absolute size-7 transition-all" />
-<!--     <SunIcon id="light" class="theme-toggle-icon size-5 transition-all" /> -->
     <Icon name="meteocons:starry-night" id="dark" class="theme-toggle-icon relative size-7 transition-all" />
-<!--     <MoonIcon
-      id="dark"
-      class="theme-toggle-icon absolute size-5 transition-all"
-    /> -->
-    <SystemIcon
-      id="system"
-      class="theme-toggle-icon absolute size-5 transition-all"
-    />
+    <Icon name="meteocons:solar-eclipse" id="system" class="theme-toggle-icon absolute size-7 transition-all" />
   </button>
   <div
     id="themes-menu"
-    class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
+    class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-200  bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
   >
     <ul>
       {
